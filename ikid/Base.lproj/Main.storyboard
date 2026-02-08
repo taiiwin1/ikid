@@ -21,6 +21,7 @@
                         <segue destination="2H3-R4-oRc" kind="relationship" relationship="viewControllers" id="1UI-cV-Pmi"/>
                         <segue destination="zvy-Pb-QdD" kind="relationship" relationship="viewControllers" id="cpC-Gk-6lB"/>
                         <segue destination="XAH-W7-vnd" kind="relationship" relationship="viewControllers" id="hZb-qS-sHa"/>
+                        <segue destination="Vwa-ft-yBY" kind="relationship" relationship="viewControllers" id="rxE-vR-Vd0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwz-8B-AYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -157,6 +158,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUE-bA-GX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1552" y="-358"/>
+        </scene>
+        <!--Knock Knock-->
+        <scene sceneID="t3H-Xg-yc2">
+            <objects>
+                <viewController id="Vwa-ft-yBY" customClass="KnockKnockViewController" customModule="ikid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S2X-f4-eJr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knock Knock goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcN-4C-zjI">
+                                <rect key="frame" x="106.66666666666669" y="415.66666666666669" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOI-Eh-sZO">
+                                <rect key="frame" x="313.33333333333331" y="680" width="59.666666666666686" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="Vwa-ft-yBY" eventType="touchUpInside" id="C4j-tZ-heY"/>
+                                    <action selector="nextTapped:" destination="2H3-R4-oRc" eventType="touchUpInside" id="fRR-iF-KFO"/>
+                                    <action selector="nextTapped:" destination="XAH-W7-vnd" eventType="touchUpInside" id="iIK-0s-LEl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mpE-8o-ztm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dcN-4C-zjI" firstAttribute="centerX" secondItem="S2X-f4-eJr" secondAttribute="centerX" id="1fG-IZ-XkH"/>
+                            <constraint firstItem="mpE-8o-ztm" firstAttribute="bottom" secondItem="TOI-Eh-sZO" secondAttribute="bottom" constant="20" id="PeJ-qm-Hwa"/>
+                            <constraint firstItem="dcN-4C-zjI" firstAttribute="centerY" secondItem="S2X-f4-eJr" secondAttribute="centerY" id="QuK-Xp-16g"/>
+                            <constraint firstItem="mpE-8o-ztm" firstAttribute="trailing" secondItem="TOI-Eh-sZO" secondAttribute="trailing" constant="20" id="lLt-DT-SMi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Knock Knock" id="ULB-nL-5aq"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="dcN-4C-zjI" id="paP-Nk-mWK"/>
+                        <outlet property="nextButton" destination="TOI-Eh-sZO" id="f8P-d9-Vyg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dq4-cg-Wax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="-414"/>
         </scene>
     </scenes>
     <resources>
